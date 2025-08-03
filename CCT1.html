@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cocoa Cycle Time Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="ofi-logo.png" type="image/png">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
+<link rel="stylesheet" href="style.css" />
+ 
+</head>
+<body>
+  <header class="navbar">
+    <img src="ofi-logo.png" alt="OFI Logo" class="logo" />
+    <h1>Cocoa Cycle Time Dashboard</h1>
+  </header>
+
+  <section class="hero">
+    <img src="ghana-cocoa.webp" alt="Cocoa Cycle" class="hero-img" />
+    <div class="hero-text">
+      <h2>Track, Analyze, and Optimize Your Cocoa Cycle Time</h2>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="card upload-section">
+      <h3>Upload Excel Sheet (Weekly Data)</h3>
+      <input type="file" id="excelUpload" accept=".xlsx, .xls" />
+    </div>
+
+    <div class="card metrics">
+      <div class="metric" id="fundDuration">Fund Duration: --</div>
+      <div class="metric" id="grnToDispatch">GRN to Dispatch: --</div>
+      <div class="metric" id="dispatchToPort">Dispatch to Port: --</div>
+      <div class="metric" id="portToOffload">Port to Offload: --</div>
+    </div>
+
+    <div class="card chart-section">
+      <h3>Cycle Time Chart</h3>
+      <canvas id="cycleChart"></canvas>
+    </div>
+
+    <div class="card download-section">
+      <button onclick="downloadExcel()">Download Cycle Time Report</button>
+    </div>
+  </main>
+
+  <footer class="footer">&copy; 2025 OFI. All rights reserved.</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

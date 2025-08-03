@@ -1,0 +1,177 @@
+/* General Reset and Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #fdf8f5;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #800020; /* Burgundy */
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  height: 40px;
+  margin-right: 1rem;
+}
+
+.navbar h1 {
+  font-size: 1.8rem;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  max-width: 90%;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+/* Main Content */
+.container {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  animation: slideUp 1s ease-in-out;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Upload Section */
+.upload-section input[type="file"] {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* Metrics */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.metric {
+  background: #ffe5d9;
+  padding: 1.2rem;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #800020;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Chart Section */
+.chart-section canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Download Section */
+.download-section button {
+  background: #800020;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.download-section button:hover {
+  background: #a32440;
+}
+
+/* Footer */
+.footer {
+  background-color: #800020;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.navbar h1{
+    text-align: center;
+    margin-left: 350px;
+    font-size: 30px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .metric {
+    font-size: 0.9rem;
+  }
+}
